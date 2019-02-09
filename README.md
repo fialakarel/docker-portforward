@@ -28,7 +28,7 @@ Lightweight Docker image for port forwarding using SSH.
         --restart always \
         --net host \
         --name portforward80 \
-        --volume /root/.ssh:/root/.ssh:ro \
+        --volume /root/portforward/.ssh:/root/.ssh:ro \
         --env SSH_FORWARD="-R <src-ip>:<src-port>:<dst-ip>:<dst-port>" \
         --env SSH_PORT=2222 \
         --env SSH_DEST="root@<dst-ip>" \
