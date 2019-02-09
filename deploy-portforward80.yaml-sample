@@ -1,0 +1,15 @@
+- name: Deploy port forwarding 80
+  docker_container:
+    name: portforward80
+    image: fialakarel/portforward:latest
+    network_mode: host
+    state: started
+    restart_policy: always
+    volumes:
+      - "/etc/localtime:/etc/localtime:ro"
+      - "/etc/machine_id:/etc/machine_id:ro"
+      - "/root/portforward/root/.ssh:/root/.ssh:ro"
+    env:
+      SSH_FORWARD="-R <src-ip>:<src-port>:<dst-ip>:<dst-port>"
+      SSH_PORT=2222
+      SSH_DEST="root@<dst-ip>"
