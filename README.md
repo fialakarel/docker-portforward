@@ -15,7 +15,7 @@ Lightweight Docker image for port forwarding using SSH.
         --env SSH_FORWARD="-R <src-ip>:<src-port>:<dst-ip>:<dst-port>" \
         --env SSH_PORT=2222 \
         --env SSH_DEST="root@<dst-ip>" \
-        "fialakarel/portforward
+        fialakarel/portforward
 
 ### Production
 
@@ -32,4 +32,4 @@ Lightweight Docker image for port forwarding using SSH.
         --env SSH_FORWARD="-R <src-ip>:<src-port>:<dst-ip>:<dst-port>" \
         --env SSH_PORT=2222 \
         --env SSH_DEST="root@<dst-ip>" \
-        "fialakarel/portforward
+        fialakarel/portforward
